@@ -1,0 +1,180 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f7fafc;
+    background-image:
+        linear-gradient(to bottom, rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)),
+        url('../assets/premium_court_day.png');
+    /* Reuse the premium court image for background context */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 440px;
+    padding: 20px;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.card-header {
+    margin-bottom: 30px;
+}
+
+.logo-area {
+    margin-bottom: 20px;
+}
+
+.logo-mark {
+    background: #1a365d;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    color: #1a202c;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.card-header p {
+    color: #718096;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Form Styles */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #2d3748;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #4a5568;
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: #3182ce;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a365d;
+    /* Navy Blue */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #2a4365;
+}
+
+/* Footer of Card */
+.card-footer {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.card-footer a {
+    color: #3182ce;
+    font-weight: 500;
+}
+
+.back-link {
+    margin-top: 12px;
+}
+
+.back-link a {
+    color: #a0aec0;
+    font-size: 0.85rem;
+}
+
+.back-link a:hover {
+    color: #718096;
+}
+
+/* Page Legal Footer */
+.login-footer-legal {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.login-footer-legal a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}

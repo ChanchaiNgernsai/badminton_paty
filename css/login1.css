@@ -1,0 +1,296 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #0a0a0a;
+    /* Dark background */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Background Effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(94, 255, 178, 0.05) 0%, rgba(138, 43, 226, 0.03) 50%, transparent 80%);
+    z-index: -1;
+    animation: rotateBg 25s linear infinite;
+}
+
+@keyframes rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Split Layout */
+.split-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Left: Brand Side */
+.brand-side {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.brand-logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #5effb2;
+    /* Neon Mint */
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    text-shadow: 0 0 10px rgba(94, 255, 178, 0.3);
+}
+
+.brand-headline {
+    font-size: 3rem;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.brand-sub {
+    font-size: 1.1rem;
+    color: #aaa;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+/* Visual Pattern on Brand Side */
+.brand-visual-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-image:
+        radial-gradient(rgba(189, 43, 238, 0.2) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+    mask-image: linear-gradient(to top, black, transparent);
+    -webkit-mask-image: linear-gradient(to top, black, transparent);
+}
+
+/* Right: Form Side */
+.form-side {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    /* Allow content to flow down */
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+}
+
+.form-header h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+}
+
+.form-header p {
+    color: #888;
+    margin: 0;
+}
+
+/* Form Elements */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.3s;
+    outline: none;
+    font-family: inherit;
+}
+
+.input-group input:focus {
+    border-color: #bd2bee;
+    box-shadow: 0 0 0 3px rgba(189, 43, 238, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.forgot-pass {
+    color: #5effb2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.forgot-pass:hover {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(94, 255, 178, 0.5);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #5effb2, #bd2bee);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(94, 255, 178, 0.3);
+}
+
+.btn-google {
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.1s;
+}
+
+.btn-google:hover {
+    background-color: #e0e0e0;
+}
+
+.signup-prompt {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.signup-prompt a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
+
+.corner-nav {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.corner-nav a {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.corner-nav a:hover {
+    color: #fff;
+}
+
+/* Why Join Section for Login Page (Scrolling Content) */
+.login-features {
+    width: 100%;
+    padding: 60px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: #050505;
+}
+
+.features-mini-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature-mini {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.feature-mini h4 {
+    color: #bd2bee;
+    margin: 0 0 10px 0;
+}
+
+.feature-mini p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+}
