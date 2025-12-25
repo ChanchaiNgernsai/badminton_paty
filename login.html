@@ -19,14 +19,23 @@
         <div class="logo">BORCHELLE</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="#" data-i18n="nav_about">About</a></li>
+                <li><a href="#" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="login.html" data-i18n="nav_login">Login</a></li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
+        <div class="header-actions">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." data-i18n="search_placeholder">
+            </div>
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button onclick="setLanguage('th')" class="lang-btn">TH</button>
+                <span class="divider">|</span>
+                <button onclick="setLanguage('en')" class="lang-btn active">EN</button>
+            </div>
         </div>
     </header>
 
@@ -35,44 +44,51 @@
             <div class="flip-card-inner">
                 <!-- Login Front -->
                 <div class="flip-card-front">
-                    <h2>Welcome Back</h2>
+                    <h2 data-i18n="login_title">Welcome Back</h2>
                     <form action="index.html">
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" placeholder="Enter your username">
+                            <label for="username" data-i18n="login_user_label">Username</label>
+                            <input type="text" id="username" placeholder="Enter your username"
+                                data-i18n="login_user_ph">
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" placeholder="Enter your password">
+                            <label for="password" data-i18n="login_pass_label">Password</label>
+                            <input type="password" id="password" placeholder="Enter your password"
+                                data-i18n="login_pass_ph">
                         </div>
-                        <button type="submit" class="btn-login">Sign In</button>
+                        <button type="submit" class="btn-login" data-i18n="login_btn">Sign In</button>
                     </form>
                     <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
-                        Don't have an account? <a href="#" id="show-register" style="color: var(--accent-teal);">Sign
+                        <span data-i18n="login_no_account">Don't have an account?</span> <a href="#" id="show-register"
+                            style="color: var(--accent-teal);" data-i18n="login_signup_link">Sign
                             up</a>
                     </p>
                 </div>
 
                 <!-- Register Back -->
                 <div class="flip-card-back">
-                    <h2>Create Account</h2>
+                    <h2 data-i18n="register_title">Create Account</h2>
                     <form action="index.html">
                         <div class="form-group">
-                            <label for="reg-email">Email</label>
-                            <input type="email" id="reg-email" placeholder="Enter your email">
+                            <label for="reg-email" data-i18n="register_email_label">Email</label>
+                            <input type="email" id="reg-email" placeholder="Enter your email"
+                                data-i18n="register_email_ph">
                         </div>
                         <div class="form-group">
-                            <label for="reg-username">Username</label>
-                            <input type="text" id="reg-username" placeholder="Choose a username">
+                            <label for="reg-username" data-i18n="register_user_label">Username</label>
+                            <input type="text" id="reg-username" placeholder="Choose a username"
+                                data-i18n="register_user_ph">
                         </div>
                         <div class="form-group">
-                            <label for="reg-password">Password</label>
-                            <input type="password" id="reg-password" placeholder="Create a password">
+                            <label for="reg-password" data-i18n="register_pass_label">Password</label>
+                            <input type="password" id="reg-password" placeholder="Create a password"
+                                data-i18n="register_pass_ph">
                         </div>
-                        <button type="submit" class="btn-login">Register</button>
+                        <button type="submit" class="btn-login" data-i18n="register_btn">Register</button>
                     </form>
                     <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
-                        Already have an account? <a href="#" id="show-login">Sign in</a>
+                        <span data-i18n="register_have_account">Already have an account?</span> <a href="#"
+                            id="show-login" data-i18n="register_signin_link">Sign in</a>
                     </p>
                 </div>
             </div>
@@ -81,14 +97,16 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 Badminton Party. All rights reserved.</p>
+            <p data-i18n="footer_copy">&copy; 2025 Badminton Party. All rights reserved.</p>
             <ul class="footer-links" style="justify-content: center; margin-top: 0.5rem;">
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
+                <li><a href="#" data-i18n="footer_privacy">Privacy</a></li>
+                <li><a href="#" data-i18n="footer_terms">Terms</a></li>
             </ul>
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/auth.js"></script>
 </body>
 

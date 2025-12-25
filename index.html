@@ -19,25 +19,35 @@
         <div class="logo">BORCHELLE</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="#" data-i18n="nav_about">About</a></li>
+                <li><a href="#" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="login.html" data-i18n="nav_login">Login</a></li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
+        <div class="header-actions">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." data-i18n="search_placeholder">
+            </div>
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button onclick="setLanguage('th')" class="lang-btn">TH</button>
+                <span class="divider">|</span>
+                <button onclick="setLanguage('en')" class="lang-btn active">EN</button>
+            </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>BADMINTON.<br><span class="highlight">PATY</span></h1>
-            <h2>Badminton Party Presentation</h2>
-            <p>The shuttlecock flies with a speed that tests reflexes and challenges even the most seasoned players.
+            <h1 data-i18n="hero_title">BADMINTON.<br><span class="highlight">PATY</span></h1>
+            <h2 data-i18n="hero_subtitle">Badminton Party Presentation</h2>
+            <p data-i18n="hero_desc">The shuttlecock flies with a speed that tests reflexes and challenges even the most
+                seasoned players.
                 Each swing of the racket is a blend of power and finesse.</p>
 
-            <a href="login.html" class="cta-box">
+            <a href="login.html" class="cta-box" data-i18n="hero_cta">
                 START PARTY
             </a>
         </div>
@@ -48,55 +58,308 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="features animate-on-scroll" id="features">
+    <!-- THE VIBE Section -->
+    <!-- THE SYSTEM Section (Formerly Vibe) -->
+    <section class="system-section animate-on-scroll" id="system">
         <div class="section-title animate-on-scroll">
-            <h2>How It <span class="highlight-text">Works</span></h2>
-            <p>Smart system to manage your badminton party effortlessly</p>
+            <h2 data-i18n="system_title">THE <span class="highlight-text">SYSTEM</span></h2>
+            <p class="section-subtitle" data-i18n="system_desc">The ultimate platform for court organization. Seamlessly
+                manage your play.</p>
         </div>
-        <div class="features-grid">
-            <div class="feature-card animate-on-scroll">
-                <div class="icon-box">
-                    <img src="assets/icons/matchmaking.png" alt="Matchmaking Icon">
+        <div class="system-grid">
+            <div class="system-card animate-on-scroll">
+                <div class="card-image">
+                    <img src="assets/neon_court_night.png" alt="Night Mode">
                 </div>
-                <h3>Smart Matchmaking</h3>
-                <p>Fair and balanced team creation based on player levels. Drag, drop, and let the algorithm do the
-                    work.</p>
+                <div class="card-content">
+                    <h3 data-i18n="vibe_night">01. NIGHT MODE</h3>
+                    <p data-i18n="vibe_night_desc">Real-time availability view. Reserve your preferred court instantly
+                        with our live dashboard.</p>
+                </div>
             </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="icon-box">
-                    <img src="assets/icons/dashboard.png" alt="Dashboard Icon">
+            <div class="system-card animate-on-scroll">
+                <div class="card-image">
+                    <img src="assets/neon_tournament_action.png" alt="Tournament">
                 </div>
-                <h3>Live Dashboard</h3>
-                <p>Track every court in real-time. Monitor game status, timers, and shuttlecock usage at a glance.</p>
+                <div class="card-content">
+                    <h3 data-i18n="vibe_tourney">02. TOURNAMENT</h3>
+                    <p data-i18n="vibe_tourney_desc">Invite friends, split costs, and manage team rosters effortlessly
+                        within the app.</p>
+                </div>
             </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="icon-box">
-                    <img src="assets/icons/tracking.png" alt="Tracking Icon">
+            <div class="system-card animate-on-scroll">
+                <div class="card-image">
+                    <img src="assets/neon_social_lounge.png" alt="Social Lounge">
                 </div>
-                <h3>Result Tracking</h3>
-                <p>Record scores instantly and build up player history stats for better future matchups.</p>
+                <div class="card-content">
+                    <h3 data-i18n="vibe_social">03. SOCIAL LOUNGE</h3>
+                    <p data-i18n="vibe_social_desc">Track scores, organize tournaments, and rank up in the Badminton
+                        Party league.</p>
+                </div>
+            </div>
+            <div class="system-card animate-on-scroll">
+                <div class="card-image">
+                    <img src="assets/neon_pro_gear.png" alt="Pro Gear">
+                </div>
+                <div class="card-content">
+                    <h3 data-i18n="vibe_gear">04. PRO GEAR</h3>
+                    <p data-i18n="vibe_gear_desc">Access premium equipment rentals and customized recommendations for
+                        your play style.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Showcase Section -->
-    <section class="showcase animate-on-scroll">
+    <section class="system-section animate-on-scroll" id="showcase">
         <div class="section-title animate-on-scroll">
-            <h2>Party <span class="highlight-text">Vibes</span></h2>
-            <p>Experience the premium atmosphere of competitive fun</p>
+            <h2 data-i18n="showcase_title">PARTY <span class="highlight-text">VIBES</span></h2>
+            <p class="section-subtitle" data-i18n="showcase_desc">Experience the premium atmosphere of competitive fun
+            </p>
         </div>
-        <div class="showcase-gallery">
-            <div class="gallery-item large animate-on-scroll">
-                <img src="assets/showcase/promo1.png" alt="Badminton Action">
-                <div class="overlay">
-                    <h3>Community Driven</h3>
+        <div class="system-grid">
+            <div class="system-card animate-on-scroll">
+                <div class="card-image">
+                    <img src="assets/showcase/promo1.png" alt="Badminton Action">
+                </div>
+                <div class="card-content">
+                    <h3 data-i18n="showcase_community">COMMUNITY DRIVEN</h3>
+                    <p data-i18n="showcase_community_desc">Join a vibrant community of passionate players. Connect,
+                        compete, and celebrate every match together.</p>
                 </div>
             </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="assets/showcase/promo2.png" alt="Equipment Detail">
-                <div class="overlay">
-                    <h3>Pro Standard</h3>
+            <div class="system-card animate-on-scroll">
+                <div class="card-image">
+                    <img src="assets/showcase/promo2.png" alt="Equipment Detail">
                 </div>
+                <div class="card-content">
+                    <h3 data-i18n="showcase_pro">PRO STANDARD</h3>
+                    <p data-i18n="showcase_pro_desc">Play on courts that meet international standards. Perfect lighting,
+                        flooring, and equipment for your best game.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Court Section -->
+    <section class="court-3d-section animate-on-scroll" id="court-3d">
+        <div class="section-title animate-on-scroll">
+            <h2 data-i18n="court_title">3D Court <span class="highlight-text">Layout</span></h2>
+            <p data-i18n="court_desc">Preview the professional court layout in 360 degrees.</p>
+        </div>
+
+        <div class="court-container">
+            <!-- Left Panel: Member List -->
+            <div class="court-sidebar left-sidebar">
+                <h3 data-i18n="court_members">Member List</h3>
+                <div class="member-list">
+                    <div class="member-list-item">
+                        <div class="member-avatar"
+                            style="background-image: url('assets/avatar_david.png'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="member-info">
+                            <span class="member-name">David K.</span>
+                            <span class="member-status online">Online</span>
+                        </div>
+                    </div>
+                    <div class="member-list-item">
+                        <div class="member-avatar"
+                            style="background-image: url('assets/avatar_emily.png'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="member-info">
+                            <span class="member-name">Emily W.</span>
+                            <span class="member-status playing">Playing</span>
+                        </div>
+                    </div>
+                    <div class="member-list-item">
+                        <div class="member-avatar"
+                            style="background-image: url('assets/avatar_michael.png'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="member-info">
+                            <span class="member-name">Michael R.</span>
+                            <span class="member-status">Offline</span>
+                        </div>
+                    </div>
+                    <div class="member-list-item">
+                        <div class="member-avatar"
+                            style="background-image: url('assets/avatar_alex.png'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="member-info">
+                            <span class="member-name">Alex T.</span>
+                            <span class="member-status playing">Playing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center: 3D Canvas -->
+            <div class="court-center">
+                <div id="court-canvas"></div>
+                <div class="court-overlay">
+                    <div class="overlay-content">
+                        <h3 data-i18n="court_overlay_title">Interactive Preview</h3>
+                        <p data-i18n="court_overlay_msg">Login to customize your court layout</p>
+                        <a href="login.html" class="btn-login btn-sm" data-i18n="court_login_btn"
+                            style="display:inline-block; width:auto; margin-top:10px;">Login to Customize</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Match Stats -->
+            <div class="court-sidebar right-sidebar">
+                <h3 data-i18n="court_matchup">Live Match</h3>
+                <div class="matchup-container">
+                    <div class="matchup-players">
+                        <!-- Player 1 -->
+                        <div class="player-col">
+                            <div class="member-avatar large"
+                                style="background-image: url('assets/avatar_alex.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <span class="player-name">Alex T.</span>
+                        </div>
+
+                        <!-- VS Badge -->
+                        <div class="vs-col">
+                            <div class="vs-badge">VS</div>
+                        </div>
+
+                        <!-- Player 2 -->
+                        <div class="player-col">
+                            <div class="member-avatar large"
+                                style="background-image: url('assets/avatar_sarah.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <span class="player-name">Sarah L.</span>
+                        </div>
+                    </div>
+
+                    <div class="match-score-board">
+                        <div class="score">21</div>
+                        <div class="divider">-</div>
+                        <div class="score">18</div>
+                    </div>
+
+                    <div class="match-details">
+                        <div class="detail-item">
+                            <span class="label" data-i18n="stats_time">Time Played</span>
+                            <span class="value">15:30</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label" data-i18n="weak_spots_label">Weak Spots</span>
+                            <span class="value highlight">2 Detected</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Access Section -->
+    <section class="access-section animate-on-scroll" id="access">
+        <div class="section-title animate-on-scroll">
+            <h2 data-i18n="access_title">THE <span class="highlight-text">ACCESS</span></h2>
+            <p class="section-subtitle" data-i18n="access_subtitle">Choose your level of engagement. Elevate your
+                status.</p>
+        </div>
+
+        <div class="pricing-container">
+            <!-- Guest Tier -->
+            <div class="pricing-card animate-on-scroll">
+                <h3 data-i18n="tier_guest">GUEST</h3>
+                <div class="price-display">
+                    <span class="currency" data-i18n="price_guest">฿0</span><span class="period">/mo</span>
+                </div>
+                <ul class="features-list">
+                    <li data-i18n="feat_std_booking">Standard Booking Access</li>
+                    <li data-i18n="feat_pay_play">Pay-per-play</li>
+                    <li data-i18n="feat_public_lounge">Public Lounge Access</li>
+                </ul>
+                <a href="#" class="btn-pricing outline" data-i18n="btn_start">START NOW</a>
+            </div>
+
+            <!-- Member Tier (Popular) -->
+            <div class="pricing-card popular animate-on-scroll">
+                <div class="popular-tag" data-i18n="access_most_popular">MOST POPULAR</div>
+                <h3 data-i18n="tier_member">MEMBER</h3>
+                <div class="price-display">
+                    <span class="currency" data-i18n="price_member">฿1,200</span><span class="period">/mo</span>
+                </div>
+                <ul class="features-list">
+                    <li data-i18n="feat_7day">7-Day Advance Booking</li>
+                    <li data-i18n="feat_discount">15% Court Discount</li>
+                    <li data-i18n="feat_locker">Locker Access</li>
+                    <li data-i18n="feat_guest_pass">Guest Passes (2/mo)</li>
+                </ul>
+                <a href="#" class="btn-pricing solid" data-i18n="btn_join">JOIN CLUB</a>
+            </div>
+
+            <!-- Luminary Tier -->
+            <div class="pricing-card animate-on-scroll">
+                <h3 data-i18n="tier_luminary">LUMINARY</h3>
+                <div class="price-display">
+                    <span class="currency" data-i18n="price_luminary">฿3,500</span><span class="period">/mo</span>
+                </div>
+                <ul class="features-list">
+                    <li data-i18n="feat_priority">Priority Booking (14-Day)</li>
+                    <li data-i18n="feat_unlimited">Unlimited Court Access (Off-peak)</li>
+                    <li data-i18n="feat_private">Private Suite Access</li>
+                    <li data-i18n="feat_shop">Pro Shop Discounts</li>
+                    <li data-i18n="feat_tourney">Tournament Entry</li>
+                </ul>
+                <a href="#" class="btn-pricing outline" data-i18n="btn_apply">APPLY FOR PRO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Voices Section -->
+    <section class="reviews-section animate-on-scroll" id="reviews">
+        <div class="section-title animate-on-scroll">
+            <h2 data-i18n="reviews_title">COMMUNITY <span class="highlight-text">VOICES</span></h2>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card animate-on-scroll">
+                <div class="user-info">
+                    <div class="user-avatar"
+                        style="background-image: url('assets/avatar_alex.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div>
+                        <h4 data-i18n="review_1_name">Alex T.</h4>
+                        <span class="user-role" data-i18n="review_1_role">Pro Circuit Player</span>
+                    </div>
+                </div>
+                <p data-i18n="review_1_text">"The lighting system is revolutionary. No glare, just pure focus. It's the
+                    only place I train now."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+
+            <div class="review-card animate-on-scroll">
+                <div class="user-info">
+                    <div class="user-avatar"
+                        style="background-image: url('assets/avatar_sarah.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div>
+                        <h4 data-i18n="review_2_name">Sarah L.</h4>
+                        <span class="user-role" data-i18n="review_2_role">League Director</span>
+                    </div>
+                </div>
+                <p data-i18n="review_2_text">"The app makes organizing our corporate league effortless. This is the
+                    future of badminton."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+
+            <div class="review-card animate-on-scroll">
+                <div class="user-info">
+                    <div class="user-avatar"
+                        style="background-image: url('assets/avatar_michael.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div>
+                        <h4 data-i18n="review_3_name">Michael R.</h4>
+                        <span class="user-role" data-i18n="review_3_role">Enthusiast</span>
+                    </div>
+                </div>
+                <p data-i18n="review_3_text">"From the court floor quality to the private suite, everything here screams
+                    excellence."</p>
+                <div class="stars">★★★★★</div>
             </div>
         </div>
     </section>
@@ -106,19 +369,35 @@
         <div class="footer-content">
             <div class="footer-logo">BORCHELLE</div>
             <ul class="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+                <li><a href="#" data-i18n="footer_terms">Terms of Service</a></li>
+                <li><a href="#" data-i18n="footer_contact">Contact Us</a></li>
             </ul>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-            <p>&copy; 2025 Badminton Party. All rights reserved.</p>
+            <p data-i18n="footer_copy">&copy; 2025 Badminton Party. All rights reserved.</p>
         </div>
     </footer>
 
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module">
+        import { initCourt3D } from './js/court_3d.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            initCourt3D();
+        });
+    </script>
+
+    <script src="js/translations.js"></script>
     <script src="js/app.js"></script>
 </body>
 
