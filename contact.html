@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Coach - Badminton Party</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;900&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-section {
+            padding: 8rem 5%;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-info h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 100%;
+        }
+
+        .contact-form-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(0, 201, 167, 0.3);
+        }
+
+        .contact-form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .contact-form-group input,
+        .contact-form-group select,
+        .contact-form-group textarea {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form-group input:focus,
+        .contact-form-group select:focus,
+        .contact-form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(0, 201, 167, 0.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, var(--accent-teal), #00F0C6);
+            border: none;
+            border-radius: 12px;
+            color: #000;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 201, 167, 0.4);
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .contact-info h1 {
+                font-size: 3rem;
+            }
+
+            .contact-info p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">BORCHELLE</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="#" data-i18n="nav_about">About</a></li>
+                <li><a href="store.html" data-i18n="nav_store">Store</a></li>
+                <li><a href="news.html" data-i18n="nav_news">News</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact" style="color: var(--accent-teal);">Contact</a></li>
+                <li><a href="login.html" data-i18n="nav_login">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." data-i18n="search_placeholder">
+            </div>
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button onclick="setLanguage('th')" class="lang-btn">TH</button>
+                <span class="divider">|</span>
+                <button onclick="setLanguage('en')" class="lang-btn active">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Removed by User Request -->
+
+    <!-- Our Coaches Section -->
+    <section class="coaches-section">
+        <div class="section-bg-glow"></div>
+        <div class="section-title">
+            <h2 style="font-size: 3.5rem; margin-bottom: 0.5rem; text-transform: uppercase;">Elite <span
+                    class="highlight">Mentors</span></h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; letter-spacing: 0.5px;">Master your craft with
+                world-class guidance.</p>
+        </div>
+
+        <div class="coaches-grid">
+            <!-- Coach 1 -->
+            <div class="coach-card">
+                <div class="coach-image">
+                    <img src="assets/avatar_david.png" alt="Coach David">
+                    <div class="coach-overlay"></div>
+                </div>
+                <div class="coach-content">
+                    <div class="coach-header">
+                        <h3>David K.</h3>
+                        <span class="pro-badge">PRO</span>
+                    </div>
+                    <p class="coach-exp">Former National Player</p>
+
+                    <div class="coach-tags">
+                        <span>Tactics</span>
+                        <span>Mental Game</span>
+                        <span>Advanced</span>
+                    </div>
+
+                    <p class="coach-desc">Specializes in advanced court strategy and competitive mindset conditioning.
+                    </p>
+                    <a href="login.html" class="btn-register">Book Session</a>
+                </div>
+            </div>
+
+            <!-- Coach 2 -->
+            <div class="coach-card">
+                <div class="coach-image">
+                    <img src="assets/avatar_emily.png" alt="Coach Emily">
+                    <div class="coach-overlay"></div>
+                </div>
+                <div class="coach-content">
+                    <div class="coach-header">
+                        <h3>Emily W.</h3>
+                    </div>
+                    <p class="coach-exp">Junior Team Head Coach</p>
+
+                    <div class="coach-tags">
+                        <span>Fundamentals</span>
+                        <span>Footwork</span>
+                        <span>Youth</span>
+                    </div>
+
+                    <p class="coach-desc">Expert in building solid foundations and agile movement patterns for rising
+                        stars.</p>
+                    <a href="login.html" class="btn-register">Book Session</a>
+                </div>
+            </div>
+
+            <!-- Coach 3 -->
+            <div class="coach-card">
+                <div class="coach-image">
+                    <img src="assets/avatar_michael.png" alt="Coach Michael">
+                    <div class="coach-overlay"></div>
+                </div>
+                <div class="coach-content">
+                    <div class="coach-header">
+                        <h3>Michael R.</h3>
+                        <span class="pro-badge">ELITE</span>
+                    </div>
+                    <p class="coach-exp">Performance Director</p>
+
+                    <div class="coach-tags">
+                        <span>Power</span>
+                        <span>Speed</span>
+                        <span>Endurance</span>
+                    </div>
+
+                    <p class="coach-desc">Focuses on explosive power generation and high-intensity match stamina.</p>
+                    <a href="login.html" class="btn-register">Book Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">BORCHELLE</div>
+            <ul class="footer-links">
+                <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+                <li><a href="#" data-i18n="footer_terms">Terms of Service</a></li>
+                <li><a href="contact.html" data-i18n="footer_contact">Contact Us</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p data-i18n="footer_copy">&copy; 2025 Badminton Party. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Badminton Party</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;900&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">BORCHELLE</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="#" data-i18n="nav_about">About</a></li>
+                <li><a href="store.html" data-i18n="nav_store">Store</a></li>
+                <li><a href="news.html" data-i18n="nav_news" style="color: var(--accent-teal);">News</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="login.html" data-i18n="nav_login">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." data-i18n="search_placeholder">
+            </div>
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button onclick="setLanguage('th')" class="lang-btn">TH</button>
+                <span class="divider">|</span>
+                <button onclick="setLanguage('en')" class="lang-btn active">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="news-section">
+        <div class="section-bg-glow"></div>
+        <div class="section-title">
+            <h2 data-i18n="news_title">LATEST <span class="highlight-text">NEWS</span></h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; letter-spacing: 0.5px;" data-i18n="news_desc">
+                Stay updated with the badminton world.</p>
+        </div>
+
+        <div class="news-grid">
+            <!-- Article 1 -->
+            <div class="news-card featured">
+                <div class="news-image">
+                    <img src="assets/neon_tournament_action.png" alt="Tournament">
+                    <span class="news-date">Dec 24, 2025</span>
+                </div>
+                <div class="news-content">
+                    <h3 data-i18n="news_1_title">Championship Finals Set</h3>
+                    <p data-i18n="news_1_desc">The top seeds will face off this weekend in what promises to be an
+                        electric
+                        match.</p>
+                    <a href="#" class="btn-read"><span data-i18n="btn_read">READ MORE</span> →</a>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="assets/neon_court_night.png" alt="Facility">
+                    <span class="news-date">Dec 20, 2025</span>
+                </div>
+                <div class="news-content">
+                    <h3 data-i18n="news_2_title">New Training Facility Opens</h3>
+                    <p data-i18n="news_2_desc">Our state-of-the-art center is now open for members, featuring 12
+                        professional courts.</p>
+                    <a href="#" class="btn-read"><span data-i18n="btn_read">READ MORE</span> →</a>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="assets/coach_david_formal.png" alt="Coach">
+                    <span class="news-date">Dec 15, 2025</span>
+                </div>
+                <div class="news-content">
+                    <h3 data-i18n="news_3_title">Summer Camp Registration</h3>
+                    <p data-i18n="news_3_desc">Join our intensive summer program led by national coaches. Limited spots
+                        available.</p>
+                    <a href="#" class="btn-read"><span data-i18n="btn_read">READ MORE</span> →</a>
+                </div>
+            </div>
+            <!-- Article 4 (New Request) -->
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="assets/regional_open.png" alt="Regional Tournament">
+                    <span class="news-date">Dec 10, 2025</span>
+                </div>
+                <div class="news-content">
+                    <h3 data-i18n="news_4_title">Regional Open 2025</h3>
+                    <p data-i18n="news_4_desc">Registration is now open for the biggest regional tournament of the year.
+                    </p>
+                    <a href="#" class="btn-read"><span data-i18n="btn_read">READ MORE</span> →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section (New) -->
+    <section class="events-section">
+        <div class="section-bg-glow"
+            style="background: radial-gradient(circle, rgba(125, 60, 152, 0.15) 0%, transparent 70%); left: 80%;"></div>
+        <div class="section-title">
+            <h2 data-i18n="events_title">UPCOMING <span class="highlight-text">EVENTS</span></h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; letter-spacing: 0.5px;" data-i18n="events_desc">
+                Don't miss the action. Mark your calendars.</p>
+        </div>
+
+        <div class="events-container">
+            <div class="events-image">
+                <img src="assets/events_bg.png" alt="Events Calendar">
+            </div>
+            <div class="events-list">
+                <!-- Event Item 1 -->
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="day">05</span>
+                        <span class="month">JAN</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 data-i18n="event_1_title">Neon Smash League</h3>
+                        <p data-i18n="event_1_desc">Quarter Finals - Main Arena</p>
+                    </div>
+                    <a href="#" class="btn-event" data-i18n="btn_details">DETAILS</a>
+                </div>
+
+                <!-- Event Item 2 -->
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="day">12</span>
+                        <span class="month">JAN</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 data-i18n="event_2_title">Junior Cup 2026</h3>
+                        <p data-i18n="event_2_desc">Registration Deadline</p>
+                    </div>
+                    <a href="#" class="btn-event" data-i18n="btn_register">REGISTER</a>
+                </div>
+
+                <!-- Event Item 3 -->
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="day">01</span>
+                        <span class="month">FEB</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 data-i18n="event_3_title">Pro Exhibition Match</h3>
+                        <p data-i18n="event_3_desc">Featuring Top 10 World Players</p>
+                    </div>
+                    <a href="#" class="btn-event" data-i18n="btn_tickets">TICKETS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">BORCHELLE</div>
+            <ul class="footer-links">
+                <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+                <li><a href="#" data-i18n="footer_terms">Terms of Service</a></li>
+                <li><a href="contact.html" data-i18n="footer_contact">Contact Us</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p data-i18n="footer_copy">&copy; 2025 Badminton Party. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
